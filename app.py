@@ -1,3 +1,16 @@
+import streamlit as st
+import pandas as pd
+import joblib
+
+# Load files
+model = joblib.load("fraud_model.pkl")
+columns = joblib.load("columns.pkl")
+raw_columns = joblib.load("raw_columns.pkl")
+
+# Load dataset (for UI reference)
+df = pd.read_csv(r"C:\Users\sidch\Downloads\credit_card_fraud_10k.csv")
+
+
 # Sidebar
 st.sidebar.title("📉 Customer Churn Predictor")
 
